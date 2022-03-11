@@ -18,6 +18,7 @@ namespace WaterProject.Models
 
         }
         public virtual DbSet<Project>Projects { get; set; }
+        public DbSet<Donation> Donations { get; set; }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{

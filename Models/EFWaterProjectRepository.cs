@@ -13,5 +13,22 @@ namespace WaterProject.Models
             context = temp;
         }
         public IQueryable<Project> Projects => context.Projects;
+
+        public void SaveProject(Project p)
+        {
+            context.SaveChanges();
+        }
+
+        public void CreateProject(Project p)
+        {
+            context.Add(p);
+            context.SaveChanges();
+        }
+
+        public void DeleteProject(Project p)
+        {
+            context.Remove(p);
+            context.SaveChanges();
+        }
     }
 }
